@@ -1,0 +1,48 @@
+:root{font-family:system-ui,sans-serif;color:#112d33;background:#f5f0e5;--ink:#112d33;--paper:#fffdf7;--red:#a43329;--line:#c2b9aa;--green:#206143}
+*{box-sizing:border-box}
+body{margin:0}
+button,input{font:inherit}
+button{cursor:pointer;color:inherit;background:var(--paper);border:1px solid var(--line);border-radius:.4rem;padding:.65rem .9rem;min-height:44px;font-weight:650}
+button:disabled{cursor:default;opacity:.55}
+button:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid #005b9b;outline-offset:3px}
+button[aria-current=true],button[aria-pressed=true],.primary{background:var(--ink);color:white;border-color:var(--ink)}
+button.done:not([aria-current=true]){background:#e2f0e5;color:#174e35;border-color:#76a58a}
+#top{position:sticky;top:0;z-index:2;background:var(--ink);color:white;display:flex;gap:.6rem 1.35rem;align-items:center;padding:.6rem max(1rem,calc((100vw - 68rem)/2));border-bottom:4px solid #c65d45}
+#home{background:transparent;color:white;border:1px solid #789098;white-space:nowrap}
+#location{font-size:clamp(1.06rem,3.8vw,1.65rem);line-height:1.16}
+main{max-width:70rem;margin:auto;padding:clamp(.9rem,3vw,2rem) 1rem 3rem}
+.cover{background:#eadac3;border-top:6px solid var(--red);padding:clamp(1.2rem,5vw,3.5rem);display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);align-items:center;gap:1.25rem}
+.cover h1{font-family:Georgia,serif;font-size:clamp(3.25rem,10vw,8rem);line-height:.83;letter-spacing:-.055em;margin:.25em 0}
+.cover h1 i{color:var(--red)}
+.cover p{max-width:38ch}
+.issue,.meta{font-size:.82rem;text-transform:uppercase;letter-spacing:.1em;font-weight:750}
+.ticket{border:1px solid var(--ink);padding:1rem;transform:rotate(3deg);background:#f7e9d4;box-shadow:5px 5px var(--ink);font-family:Georgia,serif;font-weight:bold}
+.ticket span{display:block;border-bottom:1px dashed var(--ink);padding:.45rem 0}
+.ticket span:last-child{border-bottom:0}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:1.15rem}
+.card{border-top:4px solid var(--ink);background:var(--paper);padding:1rem}
+.card:nth-child(2){border-color:var(--red)}
+.card:nth-child(3){border-color:var(--green)}
+.card h2{font:700 1.65rem Georgia,serif;margin:0}
+.card p{min-height:2.8em}
+.levels,.tasks,.actions,.bank,.built,.options{display:flex;flex-wrap:wrap;gap:.5rem}
+.tasks{margin-bottom:.85rem}
+.tasks button{min-width:44px;padding:.45rem}
+.exercise{max-width:55rem;margin:auto}
+.sheet{background:var(--paper);border:1px solid var(--line);padding:clamp(1rem,4vw,2rem)}
+.meta{color:var(--red);margin:0}
+.instruction{font:700 clamp(1.45rem,4vw,2.25rem)/1.15 Georgia,serif;margin:.45rem 0}
+.prompt{font-size:1.14rem;line-height:1.5;white-space:pre-line}
+input{width:100%;padding:.7rem;background:white;border:1px solid #6b7979;border-radius:.4rem}
+.actions{margin-top:.9rem}
+.built{padding:.55rem;min-height:58px;background:#edf0eb;border:1px dashed #789088;border-radius:.4rem;margin-bottom:.55rem;align-items:center}
+.feedback{line-height:1.45}
+.feedback:empty{display:none}
+.feedback.good{color:#174e35}
+.feedback.retry{color:#8b2d22}
+details{margin-top:1rem;border-top:1px solid var(--line);padding-top:.7rem}
+summary{cursor:pointer;font-weight:650;min-height:32px}
+.hint{white-space:pre-line}
+.progress{font-weight:650}
+@media(max-width:640px){.cards{grid-template-columns:1fr}.card p{min-height:auto}.cover{grid-template-columns:1fr}.ticket{display:none}}
+@media(max-width:380px){#home{font-size:.85rem;padding:.4rem}#top{gap:.55rem}}

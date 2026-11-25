@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#112d33">
+<title>Simple Past · London Trip</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="tasks.js"></script>
+<script defer src="app.js"></script>
+</head>
+<body>
+<header id="top">
+  <button id="home" type="button" aria-label="Zur Startseite">London Trip</button>
+  <strong id="location">Simple Past</strong>
+</header>
+<main id="main"></main>
+<template id="exercise">
+<section class="exercise">
+  <nav class="tasks" aria-label="Aufgaben"></nav>
+  <article class="sheet">
+    <p class="meta"></p>
+    <h1 tabindex="-1" class="instruction"></h1>
+    <p class="prompt"></p>
+    <form>
+      <div class="input"></div>
+      <div class="actions"><button class="primary" type="submit">Prüfen</button><button class="next" type="button">Weiter</button></div>
+    </form>
+    <p class="feedback" role="status"></p>
+    <details><summary>Hilfe anzeigen</summary><p class="hint"></p></details>
+  </article>
+  <p class="progress" role="status"></p>
+  <nav class="levels" aria-label="Levels im Kapitel"></nav>
+</section>
+</template>
+</body>
+</html>
